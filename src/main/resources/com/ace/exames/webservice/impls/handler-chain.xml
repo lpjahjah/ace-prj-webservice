@@ -1,0 +1,10 @@
+<handler-chains xmlns="http://java.sun.com/xml/ns/javaee"
+                xmlns:javaee="http://java.sun.com/xml/ns/javaee"
+                xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <handler-chain>
+        <handler>
+            <handler-name>WS-SecurityHandler</handler-name>
+            <handler-class>com.sun.xml.wss.provider.wsit.WSITServerHandler</handler-class>
+        </handler>
+    </handler-chain>
+</handler-chains>

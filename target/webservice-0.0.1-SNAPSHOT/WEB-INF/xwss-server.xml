@@ -1,0 +1,10 @@
+<!-- <xwss:JAXWS -->
+<!--     xmlns:xwss="http://java.sun.com/xml/ns/xwss/config"> -->
+<!--     <xwss:SecurityConfiguration> -->
+<!--         <xwss:RequireUsernameToken passwordDigestRequired="false" -->
+<!--                                     nonceRequired="false" -->
+<!--                                     maxNonceAge="3600"> -->
+<!--             <xwss:Validator classname="com.ace.exames.validators.ServerPasswordValidator"/> -->
+<!--         </xwss:RequireUsernameToken> -->
+<!--     </xwss:SecurityConfiguration> -->
+<!-- </xwss:JAXWS> -->

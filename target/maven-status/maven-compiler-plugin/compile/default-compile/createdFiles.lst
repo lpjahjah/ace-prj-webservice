@@ -1,2 +1,4 @@
 com\ace\exames\webservice\impls\ExamesWebServiceImpl.class
+com\ace\exames\webservice\exceptions\SoapRequiredFieldsException.class
 com\ace\exames\webservice\interfaces\ExamesWebService.class
+com\ace\exames\webservice\exceptions\SoapExameDeletionException.class

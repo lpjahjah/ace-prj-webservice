@@ -2,9 +2,12 @@ package com.ace.exames.webservice.impls;
 
 import java.util.List;
 
-import javax.ejb.EJB;
 import javax.jws.WebMethod;
 import javax.jws.WebService;
+
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
 
 import com.ace.exames.core.enums.ExameStatusEnum;
 import com.ace.exames.core.exceptions.ExameDeletionException;
@@ -18,9 +21,17 @@ import com.ace.exames.webservice.interfaces.ExamesWebService;
 
 @WebService
 public class ExamesWebServiceImpl implements ExamesWebService {
-
-	@EJB(lookup  = "ejb:\"\"/core-0.0.1-SNAPSHOT/\"\"/ExamesService!com.ace.exames.core.interfaces.ExamesService")
-    private ExamesService examesService;
+	
+	private ExamesService examesService;
+	
+	public ExamesWebServiceImpl() {
+		try {
+			Context ctx = new InitialContext();
+	        examesService = (ExamesService) ctx.lookup("ejb:\"\"/core-0.0.1-SNAPSHOT/\"\"/ExamesService!com.ace.exames.core.interfaces.ExamesService");
+		} catch (NamingException e) {
+			e.printStackTrace();
+		}
+	}
 
 	@Override
 	@WebMethod
